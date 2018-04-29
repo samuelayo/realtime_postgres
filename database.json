@@ -1,0 +1,5 @@
+{
+	"dev": {
+		"ENV": "POSTGRES_CONNECTION_URL"
+	}
+}

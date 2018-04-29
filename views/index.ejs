@@ -1,0 +1,66 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-12">
+            <h4>Realtime Movie Database</h4>
+            <div class="table-responsive">
+
+
+                <table id="mytable" class="table table-bordred table-striped">
+
+                    <thead>
+                        <th>Movie Title</th>
+                        <th>Year Released</th>
+                        <th>Producer</th>
+                    </thead>
+                    <tbody id="tableBody">
+
+                        <% table.forEach(function(row) { %>
+                            <tr>
+
+                                <td>
+                                    <%= row.title %>
+                                </td>
+                                <td>
+                                    <%= row.year %>
+                                </td>
+                                <td>
+                                    <%= row.producer %>
+                                </td>
+                            </tr>
+                            <% }); %>
+
+                    </tbody>
+
+                </table>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var pusher = new Pusher('XXX_APP_KEY', {
+        cluster: 'XXX_APP_CLUSTER',
+        encrypted: true
+    });
+
+    var channel = pusher.subscribe('watch_realtime_table');
+
+
+    channel.bind('new_record', function(data) {
+        var table = document.getElementById('mytable');
+        var row = table.insertRow(-1);
+        var title = row.insertCell(0);
+        var year = row.insertCell(1);
+        var producer = row.insertCell(2);
+        title.innerHTML = data.title;
+        year.innerHTML = data.year;
+        producer.innerHTML = data.producer;
+    });
+</script>

@@ -1,0 +1,22 @@
+{
+  "name": "realtime_postgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "db-migrate-pg": "^0.4.0",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.9",
+    "eslint-config-airbnb": "^16.1.0",
+    "express": "^4.16.3",
+    "pg": "^7.4.1",
+    "pusher": "^1.5.1"
+  }
+}
