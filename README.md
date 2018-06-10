@@ -1,6 +1,8 @@
 # Making PostgreSQL database realtime with Pusher and Node
 
-Sometimes, we want to watch over specific tables in our database and make new records or entries available to users as soon as they come in. While doing this, we do not want to take away the flexibility and advantages we get from using PostgreSQL databases. In this tutorial, we will learn about making PostgreSQL database realtime using Pusher. The full tutorial can be found here : [to be updated ](https://pusher.com/tutorials/#) 
+Sometimes, we want to watch over specific tables in our database and make new records or entries available to users as soon as they come in. While doing this, we do not want to take away the flexibility and advantages we get from using PostgreSQL databases. In this tutorial, we will learn about making PostgreSQL database realtime using Pusher. 
+
+[View tutorial](https://pusher.com/tutorials/postgresql-realtime)
 
 ## Getting Started
 Clone the project repository by running the command below if you use SSH
